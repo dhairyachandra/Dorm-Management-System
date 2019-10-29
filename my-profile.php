@@ -14,10 +14,14 @@ $mname=$_POST['mname'];
 $lname=$_POST['lname'];
 $gender=$_POST['gender'];
 $contactno=$_POST['contact'];
+$food=$_POST['food'];
+$work=$_POST['work'];
+$course=$_POST['course'];
+$sports=$_POST['sports'];
 $udate = date('d-m-Y h:i:s', time());
-$query="update  userRegistration set regNo=?,firstName=?,middleName=?,lastName=?,gender=?,contactNo=?,updationDate=? where id=?";
+$query="update  userRegistration set regNo=?,firstName=?,middleName=?,lastName=?,gender=?,contactNo=?,work=?,food=?,course=?,sports=?,updationDate=? where id=?";
 $stmt = $mysqli->prepare($query);
-$rc=$stmt->bind_param('sssssisi',$regno,$fname,$mname,$lname,$gender,$contactno,$udate,$aid);
+$rc=$stmt->bind_param('sssssisssssi',$regno,$fname,$mname,$lname,$gender,$work,$food,$course,$sports,$contactno,$udate,$aid);
 $stmt->execute();
 echo"<script>alert('Profile updated Succssfully');</script>";
 }
@@ -83,7 +87,7 @@ $aid=$_SESSION['id'];
 								<div class="panel panel-primary">
 									<div class="panel-heading">
 
-Last Updation date : &nbsp; <?php echo $row->updationDate;?> 
+Information
 </div>
 									
 
@@ -149,6 +153,67 @@ Last Updation date : &nbsp; <?php echo $row->updationDate;?>
 <span id="user-availability-status" style="font-size:12px;"></span>
 </div>
 </div>
+
+<div class="panel panel-primary">
+									<div class="panel-heading">STUDENT INTERESTS</div>
+									<div class="panel-body">
+
+
+									<div class="form-group">
+<label class="col-sm-2 control-label">Work/Study Time : </label>
+<div class="col-sm-8">
+<select name="work" class="form-control" required="required">
+<option value="<?php echo $row->work;?>"><?php echo $row->work;?></option>
+<option value="Late Night">Late Night</option>
+<option value="Early Morning">Early Morning</option>
+<option value="NA">Prefer not to say</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-2 control-label">Food Preference : </label>
+<div class="col-sm-8">
+<select name="food" class="form-control" required="required">
+<option value="<?php echo $row->food;?>"><?php echo $row->food;?></option>
+<option value="Vegetarian">Vegetarian</option>
+<option value="Non Vegetarian">Non Vegetarian</option>
+</select>
+</div>
+</div>
+
+
+<div class="form-group">
+<label class="col-sm-2 control-label">Select Course : </label>
+<div class="col-sm-8">
+<select name="course" class="form-control" required="required">
+<option value="<?php echo $row->course;?>"><?php echo $row->course;?></option>
+<option value="Graduate">Graduate</option>
+<option value="Under Graduate">Under Graduate</option>
+<option value="LAW">LAW</option>
+<option value="Medical">Medical</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-2 control-label">Sports : </label>
+<div class="col-sm-8">
+<select name="sports" class="form-control" required="required">
+<option value="<?php echo $row->sports;?>"><?php echo $row->sports;?></option>
+<option value="American Football">American Football</option>
+<option value="Baseball">Baseball</option>
+<option value="Basketball">Basketball</option>
+<option value="Ice Hockey">Ice Hockey</option>
+<option value="Soccer">Soccer</option>
+</select>
+</div>
+</div>
+
+
+
+
+
 <?php } ?>
 
 						
@@ -158,6 +223,7 @@ Last Updation date : &nbsp; <?php echo $row->updationDate;?>
 <div class="col-sm-6 col-sm-offset-4">
 
 <input type="submit" name="update" Value="Update Profile" class="btn btn-primary">
+
 </div>
 </form>
 

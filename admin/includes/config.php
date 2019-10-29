@@ -2,6 +2,6 @@
 $dbuser="root";
 $dbpass="";
 $host="localhost";
-$db="hostel";
+$db="dorm";
 $mysqli =new mysqli($host,$dbuser, $dbpass, $db);
 ?>

@@ -11,9 +11,13 @@ $gender=$_POST['gender'];
 $contactno=$_POST['contact'];
 $emailid=$_POST['email'];
 $password=$_POST['password'];
-$query="insert into  userRegistration(regNo,firstName,middleName,lastName,gender,contactNo,email,password) values(?,?,?,?,?,?,?,?)";
+$food=$_POST['food'];
+$work=$_POST['work'];
+$course=$_POST['course'];
+$sports=$_POST['sports'];
+$query="insert into  userRegistration(regNo,firstName,middleName,lastName,gender,contactNo,email,password,food,work,course,sports) values(?,?,?,?,?,?,?,?,?,?,?,?)";
 $stmt = $mysqli->prepare($query);
-$rc=$stmt->bind_param('sssssiss',$regno,$fname,$mname,$lname,$gender,$contactno,$emailid,$password);
+$rc=$stmt->bind_param('sssssissssss',$regno,$fname,$mname,$lname,$gender,$contactno,$emailid,$password,$food,$work,$course,$sports);
 $stmt->execute();
 echo"<script>alert('Student Succssfully register');</script>";
 }
@@ -146,6 +150,61 @@ return true;
 </div>
 </div>
 						
+<div class="panel panel-primary">
+									<div class="panel-heading">STUDENT INTERESTS</div>
+									<div class="panel-body">
+
+									<div class="form-group">
+<label class="col-sm-2 control-label">Work/Study Time : </label>
+<div class="col-sm-8">
+<select name="work" class="form-control" required="required">
+<option value="">Select Option</option>
+<option value="Late Night">Late Night</option>
+<option value="Early Morning">Early Morning</option>
+<option value="NA">Prefer not to say</option>
+</select>
+</div>
+</div>									
+
+<div class="form-group">
+<label class="col-sm-2 control-label">Food Preference : </label>
+<div class="col-sm-8">
+<select name="food" class="form-control" required="required">
+<option value="">Select Option</option>
+<option value="Vegetarian">Vegetarian</option>
+<option value="Non Vegetarian">Non Vegetarian</option>
+</select>
+</div>
+</div>
+
+
+<div class="form-group">
+<label class="col-sm-2 control-label">Select Course : </label>
+<div class="col-sm-8">
+<select name="course" class="form-control" required="required">
+<option value="">Select Option</option>
+<option value="Graduate">Graduate</option>
+<option value="Under Graduate">Under Graduate</option>
+<option value="LAW">LAW</option>
+<option value="Medical">Medical</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-2 control-label">Sports : </label>
+<div class="col-sm-8">
+<select name="sports" class="form-control" required="required">
+<option value="">Select Option</option>
+<option value="American Football">American Football</option>
+<option value="Baseball">Baseball</option>
+<option value="Basketball">Basketball</option>
+<option value="Ice Hockey">Ice Hockey</option>
+<option value="Soccer">Soccer</option>
+</select>
+</div>
+</div>
+
 
 
 
