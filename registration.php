@@ -79,7 +79,7 @@ return true;
 										
 
 <div class="form-group">
-<label class="col-sm-2 control-label"> Registration No : </label>
+<label class="col-sm-2 control-label"> Registration No : <font color="red">*</font></label>
 <div class="col-sm-8">
 <input type="text" name="regno" id="regno"  class="form-control" required="required" >
 </div>
@@ -87,7 +87,7 @@ return true;
 
 
 <div class="form-group">
-<label class="col-sm-2 control-label">First Name : </label>
+<label class="col-sm-2 control-label">First Name : <font color="red">*</font></label>
 <div class="col-sm-8">
 <input type="text" name="fname" id="fname"  class="form-control" required="required" >
 </div>
@@ -101,14 +101,14 @@ return true;
 </div>
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Last Name : </label>
+<label class="col-sm-2 control-label">Last Name : <font color="red">*</font></label>
 <div class="col-sm-8">
 <input type="text" name="lname" id="lname"  class="form-control" required="required">
 </div>
 </div>
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Gender : </label>
+<label class="col-sm-2 control-label">Gender : <font color="red">*</font></label>
 <div class="col-sm-8">
 <select name="gender" class="form-control" required="required">
 <option value="">Select Gender</option>
@@ -120,7 +120,7 @@ return true;
 </div>
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Contact No : </label>
+<label class="col-sm-2 control-label">Contact No : <font color="red">*</font></label>
 <div class="col-sm-8">
 <input type="text" name="contact" id="contact"  class="form-control" required="required">
 </div>
@@ -128,7 +128,7 @@ return true;
 
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Email id: </label>
+<label class="col-sm-2 control-label">Email id: <font color="red">*</font></label>
 <div class="col-sm-8">
 <input type="email" name="email" id="email"  class="form-control" onBlur="checkAvailability()" required="required">
 <span id="user-availability-status" style="font-size:12px;"></span>
@@ -136,7 +136,7 @@ return true;
 </div>
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Password: </label>
+<label class="col-sm-2 control-label">Password: <font color="red">*</font></label>
 <div class="col-sm-8">
 <input type="password" name="password" id="password"  class="form-control" required="required">
 </div>
@@ -144,7 +144,7 @@ return true;
 
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Confirm Password : </label>
+<label class="col-sm-2 control-label">Confirm Password : <font color="red">*</font></label>
 <div class="col-sm-8">
 <input type="password" name="cpassword" id="cpassword"  class="form-control" required="required">
 </div>
@@ -155,7 +155,7 @@ return true;
 									<div class="panel-body">
 
 									<div class="form-group">
-<label class="col-sm-2 control-label">Work/Study Time : </label>
+<label class="col-sm-2 control-label">Work/Study Time : <font color="red">*</font></label>
 <div class="col-sm-8">
 <select name="work" class="form-control" required="required">
 <option value="">Select Option</option>
@@ -167,7 +167,7 @@ return true;
 </div>									
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Food Preference : </label>
+<label class="col-sm-2 control-label">Food Preference : <font color="red">*</font></label>
 <div class="col-sm-8">
 <select name="food" class="form-control" required="required">
 <option value="">Select Option</option>
@@ -179,7 +179,7 @@ return true;
 
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Select Course : </label>
+<label class="col-sm-2 control-label">Select Course : <font color="red">*</font></label>
 <div class="col-sm-8">
 <select name="course" class="form-control" required="required">
 <option value="">Select Option</option>
@@ -187,12 +187,13 @@ return true;
 <option value="Under Graduate">Under Graduate</option>
 <option value="LAW">LAW</option>
 <option value="Medical">Medical</option>
+
 </select>
 </div>
 </div>
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Sports : </label>
+<label class="col-sm-2 control-label">Sports : <font color="red">*</font></label>
 <div class="col-sm-8">
 <select name="sports" class="form-control" required="required">
 <option value="">Select Option</option>
@@ -201,6 +202,7 @@ return true;
 <option value="Basketball">Basketball</option>
 <option value="Ice Hockey">Ice Hockey</option>
 <option value="Soccer">Soccer</option>
+<option value="None">None</option>
 </select>
 </div>
 </div>
