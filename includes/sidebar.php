@@ -9,6 +9,8 @@
 <li><a href="change-password.php"><i class="fa fa-files-o"></i>Change Password</a></li>
 <li><a href="book-hostel.php"><i class="fa fa-file-o"></i>Book Dorm</a></li>
 <li><a href="room-details.php"><i class="fa fa-file-o"></i>Room Details</a></li>
+<li><a href="find-roommate.php"><i class="fa fa-file-o"></i>Find Roommate</a></li>
+
 <li><a href="access-log.php"><i class="fa fa-file-o"></i>Access log</a></li>
 <?php } else { ?>
 				
