@@ -114,7 +114,7 @@ $uid=$_SESSION['login'];
 				$stmt->close();
 				if($rs)
 				{ ?>
-			<h3 style="color: red" align="left">Hostel already booked by you</h3>
+			<h3 style="color: red" align="left">Dorm already booked by you</h3>
 				<?php }
 				else{
 							echo "";
@@ -162,7 +162,7 @@ while($row=$res->fetch_object())
 <label class="col-sm-2 control-label">Food Status</label>
 <div class="col-sm-8">
 <input type="radio" value="0" name="foodstatus" checked="checked"> Without Food
-<input type="radio" value="1" name="foodstatus"> With Food(Rs 2000.00 Per Month Extra)
+<input type="radio" value="1" name="foodstatus"> With Food($500 Per Month Extra)
 </div>
 </div>	
 
